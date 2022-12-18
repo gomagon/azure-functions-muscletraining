@@ -1,0 +1,33 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "muscleData",
+      "direction": "in",
+      "type": "blob",
+      "path": "muscletraining/MuscleData.json",
+      "connection": "gomagonstorageacc01_STORAGE"
+    },
+    {
+      "name": "myKey",
+      "direction": "in",
+      "type": "blob",
+      "path": "muscletraining/myKey.json",
+      "connection": "gomagonstorageacc01_STORAGE"
+    }
+  ],
+  "scriptFile": "../dist/getAllData/index.js"
+}
